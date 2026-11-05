@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CivicLens Enterprise — Metropolitan Infrastructure Command & Incident Intelligence</title>
+  <meta name="description" content="AI-assisted civic issue detection, real-time 3D digital twin GIS telemetry, and photometric resolution verification." />
+  <meta name="theme-color" content="#f5f8f7" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#00F2FE',
+              blue: '#3B82F6',
+              violet: '#8B5CF6',
+              dark: '#050B14',
+              surface: '#0B132B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080E1A'/%3E%3Cpath d='M16 4l10 5v8c0 6-10 11-10 11S6 23 6 17V9l10-5z' fill='none' stroke='%2300F2FE' stroke-width='2.2' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='14' r='3' fill='%233B82F6'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="root"></div>
+  <noscript>CivicLens requires JavaScript to render its live 3D Digital Twin and tactical incident GIS.</noscript>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

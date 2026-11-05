@@ -1,0 +1,77 @@
+/* Emerald glass treatment shared by the intro Earth and CivicLens UI. */
+.civic-video-splash {
+  background: #071a12;
+}
+
+.civic-video-splash__media {
+  opacity: .96;
+  filter: saturate(1.12) contrast(1.05) hue-rotate(-7deg);
+}
+
+.civic-video-splash__veil {
+  background:
+    radial-gradient(ellipse at 76% 46%, rgba(36, 150, 94, .16), transparent 53%),
+    linear-gradient(90deg, rgba(5, 25, 17, .78) 0%, rgba(5, 25, 17, .40) 43%, rgba(5, 25, 17, .06) 100%),
+    linear-gradient(0deg, rgba(5, 25, 17, .66) 0%, transparent 46%, rgba(5, 25, 17, .25) 100%);
+}
+
+.civic-video-splash__brand > span:last-child > span,
+.civic-video-splash__eyebrow,
+.civic-video-splash h1 em,
+.civic-video-splash__audio span {
+  color: #91edb7;
+}
+
+.civic-video-splash__mark {
+  color: #a7f3c7;
+  border-color: rgba(145, 237, 183, .36);
+  background: rgba(9, 47, 32, .68);
+  box-shadow: 0 0 22px rgba(67, 191, 125, .15);
+}
+
+.civic-video-splash__status,
+.civic-video-splash__content > p {
+  color: #d1e7d9;
+}
+
+.civic-video-splash__status i,
+.civic-video-splash__footer i.loaded {
+  background: #72e2a3;
+  box-shadow: 0 0 13px rgba(114, 226, 163, .78);
+}
+
+.civic-video-splash__skip {
+  border-color: rgba(197, 242, 213, .34);
+  background: rgba(8, 39, 27, .46);
+  backdrop-filter: blur(14px) saturate(145%);
+}
+
+.civic-video-splash__enter {
+  color: #062316;
+  background: linear-gradient(135deg, #a8f0c2, #66d99b);
+  box-shadow: 0 10px 34px rgba(70, 202, 127, .28), inset 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.civic-video-splash__enter:hover {
+  background: linear-gradient(135deg, #baf6cf, #82e5ad);
+  transform: translateY(-1px);
+}
+
+.civic-video-splash__metrics span {
+  border-left-color: rgba(145, 237, 183, .32);
+}
+
+.civic-video-splash__metrics b {
+  color: #a9edbf;
+}
+
+.civic-video-splash__metrics small,
+.civic-video-splash__footer {
+  color: #b4cfc0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .civic-video-splash__enter {
+    transition: none;
+  }
+}

@@ -1,0 +1,261 @@
+// CivicLens Municipal Database Seed
+
+export const initialCrews = [
+  {
+    id: 'CREW-14',
+    name: 'DOT Rapid Patch #14',
+    type: 'Heavy Road Repair',
+    status: 'En Route to CIV-1048',
+    crewSize: 4,
+    x: 36,
+    y: 48,
+    lat: 40.7135,
+    lng: -74.0048,
+    vehicle: 'Thermal Asphalt Compactor Truck',
+    color: '#3B82F6'
+  },
+  {
+    id: 'CREW-09',
+    name: 'Sanitation Unit S-09',
+    type: 'Commercial Waste Clearance',
+    status: 'On Scene at Market Square',
+    crewSize: 2,
+    x: 58,
+    y: 65,
+    lat: 40.722,
+    lng: -73.996,
+    vehicle: 'High-Volume Compactor Van',
+    color: '#F59E0B'
+  },
+  {
+    id: 'CREW-02',
+    name: 'Bureau Electrical Unit B',
+    type: 'Power & Streetlight Maintenance',
+    status: 'Patrolling Sector 1',
+    crewSize: 3,
+    x: 64,
+    y: 33,
+    lat: 40.729,
+    lng: -73.988,
+    vehicle: 'Bucket Lift Truck #4',
+    color: '#10B981'
+  },
+  {
+    id: 'DRONE-01',
+    name: 'GIS Autonomous Drone Alpha',
+    type: 'Aerial Telemetry & Thermal Scan',
+    status: 'Active Aerial Sweep',
+    crewSize: 0,
+    x: 48,
+    y: 38,
+    lat: 40.718,
+    lng: -74.001,
+    vehicle: 'Hexacopter LIDAR Unit',
+    color: '#00F2FE'
+  }
+];
+
+export const initialIssues = [
+  {
+    id: 'CIV-1048',
+    type: 'Road damage',
+    title: 'Severe Asphalt Cavity on 5th Ave',
+    place: '5th Ave & Pine Street, Downtown',
+    time: '14 min ago',
+    status: 'In progress',
+    priority: 'Urgent',
+    department: 'Public works',
+    assignedCrew: 'DOT Rapid Patch #14',
+    tone: 'blue',
+    x: 32,
+    y: 44,
+    lat: 40.7128,
+    lng: -74.006,
+    confidence: 98,
+    description: 'Deep pothole (~14cm depth) causing severe rim strikes and vehicle swerving into adjacent bike lane.',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="%232D3748"/><ellipse cx="320" cy="230" rx="140" ry="85" fill="%23171923" stroke="%23E53E3E" stroke-width="4"/><text x="32" y="52" fill="%23E2E8F0" font-family="sans-serif" font-weight="800" font-size="20">DEFECT: SEVERE ROAD VOID</text></svg>',
+    hasAfter: true,
+    afterImage: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="%232D3748"/><ellipse cx="320" cy="230" rx="145" ry="90" fill="%23171923" stroke="%2300F2FE" stroke-width="3"/><text x="32" y="52" fill="%2306D6A0" font-family="sans-serif" font-weight="800" font-size="20">✓ REPAIRED: HOT-MIX ASPHALT SEALED</text></svg>',
+    analysis: {
+      score: 96,
+      changeRatio: 42,
+      isRepaired: true,
+      findings: [
+        'Photometric alignment: 99.4% pixel congruence',
+        'Asphalt void sealed with DOT-grade hot mix patch',
+        'GPS verification confirmed within 1.8 meters',
+        'Certified ready for municipal engineer sign-off'
+      ]
+    },
+    upvotes: 38,
+    reporter: 'Jordan Davis',
+    adaAffected: true,
+    schoolZone: false,
+    auditTrail: [
+      { time: '14 min ago', event: 'Report filed with photo evidence by Jordan Davis' },
+      { time: '11 min ago', event: 'AI vision auto-triaged severity: Urgent (Class 4 Void)' },
+      { time: '8 min ago', event: 'Dispatched to DOT Rapid Patch #14' },
+      { time: '4 min ago', event: 'Crew on scene, thermal asphalt compaction in progress' }
+    ]
+  },
+  {
+    id: 'CIV-1047',
+    type: 'Street lighting',
+    title: 'Pedestrian Luminaire Failure',
+    place: 'Oak Lane & 14th Blvd, North District',
+    time: '32 min ago',
+    status: 'Verified',
+    priority: 'High',
+    department: 'Street lighting',
+    assignedCrew: 'Bureau Electrical Unit B',
+    tone: 'green',
+    x: 68,
+    y: 31,
+    lat: 40.7306,
+    lng: -73.9866,
+    confidence: 94,
+    description: 'Twin pedestrian sodium-vapor lamps flickering and completely cutting out after dusk, causing blind spot near school crosswalk.',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="%230A0E1A"/><text x="32" y="52" fill="%23E2E8F0" font-family="sans-serif" font-weight="800" font-size="20">DEFECT: LUMINAIRE POWER FAILURE</text></svg>',
+    hasAfter: true,
+    afterImage: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="%230A0E1A"/><text x="32" y="52" fill="%2306D6A0" font-family="sans-serif" font-weight="800" font-size="20">✓ REPAIRED: HIGH-EFFICIENCY LED RETROFIT</text></svg>',
+    analysis: {
+      score: 93,
+      changeRatio: 58,
+      isRepaired: true,
+      findings: [
+        'High-efficiency LED luminaire head installed',
+        'Full 4,500 lumens lux output restored',
+        'Telemetry circuit ping successful'
+      ]
+    },
+    upvotes: 19,
+    reporter: 'Marcus Reed',
+    adaAffected: false,
+    schoolZone: true,
+    auditTrail: [
+      { time: '32 min ago', event: 'Report filed by Marcus Reed' },
+      { time: '20 min ago', event: 'Verified by City Operations Desk' },
+      { time: '15 min ago', event: 'Assigned to Electrical Unit B (SLA: 12h)' }
+    ]
+  },
+  {
+    id: 'CIV-1046',
+    type: 'Waste management',
+    title: 'Market Square Receptacle Overflow',
+    place: 'Market Square Central Plaza',
+    time: '1 hr ago',
+    status: 'Assigned',
+    priority: 'Normal',
+    department: 'Sanitation',
+    assignedCrew: 'Sanitation Truck S-09',
+    tone: 'amber',
+    x: 55,
+    y: 68,
+    lat: 40.7214,
+    lng: -73.9982,
+    confidence: 91,
+    description: 'Three high-volume commercial trash receptacles overflowing onto the pedestrian plaza following morning market rush.',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="%231A202C"/><text x="32" y="52" fill="%23E2E8F0" font-family="sans-serif" font-weight="800" font-size="20">DEFECT: PUBLIC OVERFLOW & LITTER</text></svg>',
+    hasAfter: true,
+    afterImage: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="%231A202C"/><text x="32" y="52" fill="%2306D6A0" font-family="sans-serif" font-weight="800" font-size="20">✓ REPAIRED: CLEARED & SANITIZED</text></svg>',
+    analysis: {
+      score: 95,
+      changeRatio: 64,
+      isRepaired: true,
+      findings: [
+        'Receptacles cleared, washed and liner replaced',
+        'Sidewalk power-washed per municipal hygiene protocol',
+        'Tamper seal verified'
+      ]
+    },
+    upvotes: 24,
+    reporter: 'Sara Lin',
+    adaAffected: true,
+    schoolZone: false,
+    auditTrail: [
+      { time: '1 hr ago', event: 'Report filed by Sara Lin' },
+      { time: '45 min ago', event: 'Sanitation triage verified high-traffic zone' },
+      { time: '30 min ago', event: 'Route S-09 detour initiated' }
+    ]
+  },
+  {
+    id: 'CIV-1045',
+    type: 'Public space',
+    title: 'Damaged Riverside Promenade Bench',
+    place: 'Riverside Waterfront Park, Pier 4',
+    time: '2 hrs ago',
+    status: 'Resolved',
+    priority: 'Normal',
+    department: 'Parks & recreation',
+    assignedCrew: 'Parks Carpentry Crew 3',
+    tone: 'violet',
+    x: 82,
+    y: 58,
+    lat: 40.7051,
+    lng: -74.015,
+    confidence: 89,
+    description: 'Splintered middle teak slat poses snag risk to joggers and elderly visitors.',
+    image: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="%231E1E24"/><text x="32" y="52" fill="%23E2E8F0" font-family="sans-serif" font-weight="800" font-size="20">DEFECT: SPLINTERED TEAK SLAT</text></svg>',
+    hasAfter: true,
+    afterImage: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400"><rect width="600" height="400" fill="%231E1E24"/><text x="32" y="52" fill="%2306D6A0" font-family="sans-serif" font-weight="800" font-size="20">✓ REPAIRED: REPLACED & COATED</text></svg>',
+    analysis: {
+      score: 97,
+      changeRatio: 51,
+      isRepaired: true,
+      findings: [
+        'Weather-treated certified teak planks installed',
+        'Structural load capacity tested to 350kg',
+        'Full photographic before/after match verified'
+      ]
+    },
+    upvotes: 14,
+    reporter: 'Jordan Davis',
+    adaAffected: false,
+    schoolZone: false,
+    auditTrail: [
+      { time: '2 hrs ago', event: 'Report filed by Jordan Davis' },
+      { time: '1 hr ago', event: 'Parks team dispatched' },
+      { time: '25 min ago', event: 'Repair finalized with photographic proof' },
+      { time: '10 min ago', event: 'Admin approved and closed ticket' }
+    ]
+  }
+];
+
+export const initialPerks = [
+  {
+    id: 'perk-transit',
+    title: 'Metro Rapid Transit 24H Pass',
+    category: 'Public Mobility',
+    cost: 80,
+    desc: 'Unlimited rides on city subways and electric buses for 24 hours.',
+    code: 'METRO-GO-8492',
+    icon: 'Zap'
+  },
+  {
+    id: 'perk-tree',
+    title: 'Urban Forestry Tree Dedication',
+    category: 'Sustainability',
+    cost: 150,
+    desc: 'A native sapling planted in your neighborhood with digital certificate.',
+    code: 'TREE-GROW-5510',
+    icon: 'Trees'
+  },
+  {
+    id: 'perk-museum',
+    title: 'City Center Museum & Art Pass',
+    category: 'Culture',
+    cost: 120,
+    desc: 'Free admission for two to the Metropolitan History & Modern Arts Center.',
+    code: 'CULTURE-MET-3391',
+    icon: 'Building2'
+  },
+  {
+    id: 'perk-parking',
+    title: 'Municipal EV Charging Voucher',
+    category: 'Green City',
+    cost: 100,
+    desc: '2 hours of complimentary high-speed charging at any public station.',
+    code: 'EV-CHARGE-9014',
+    icon: 'Zap'
+  }
+];
